@@ -27,9 +27,13 @@ do{
             break;
             
             case 2:
+                ProductView productView =
+                    new ProductView();
             break;
 
             case 3:
+                OrderView orderView =
+                    new OrderView();
             break;
 
             case 0:

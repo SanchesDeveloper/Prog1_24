@@ -1,0 +1,8 @@
+Pesquisar:
+
+Arquiterura M.V.C
+
+Tarefa:
+
+Implementar um algoritimo de busca na classe CustomerRepository que permita encontrar consumidores contendo em seu nome ao menos 4 caracteres digitados pelo
+usuario.
