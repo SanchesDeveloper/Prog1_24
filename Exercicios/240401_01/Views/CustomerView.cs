@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using _240401_01.Models;
+using _240401_01.Controllers;
+using System.ComponentModel;
 
 namespace _240401_01.Views
 {
     public class CustomerView
     {
+        private CustomerController customerControllers;
 
         public CustomerView()
         {
+            CustomerController customerControllers = new CustomerController();
             this.Init();
         }
         
@@ -55,6 +59,61 @@ namespace _240401_01.Views
                     menu = -1;
                 }                
             }while(aux);
+        }
+
+        private void InsertCustomer()
+        {
+            Console.WriteLine("***********************");
+            Console.WriteLine("INserir novo consumidor");
+            Console.WriteLine("***********************");;
+
+            Customer customer = new Customer();
+
+            Console.Write("Nome:");
+            customer.Name = Console.ReadLine();
+            Console.WriteLine("");
+
+            Console.Write("Email:");
+            customer.EmailAddress = Console.ReadLine();
+            Console.WriteLine("");
+
+            Console.Write("Nome:");
+            customer.Name = Console.ReadLine();
+            Console.WriteLine("");
+
+            
+            int aux = 0;
+            do{
+                Console.WriteLine("Deseja informar endereço?");
+                Console.WriteLine("0 - Não");
+                Console.WriteLine("1 - Sim");
+                try
+                {
+                    aux = Convert.ToInt32(Console.ReadLine());
+                    if(aux == 1)
+                    {
+                        // Carga endereço
+
+                    }
+                    else if(aux == 0)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        aux = 1;
+                    Console.WriteLine("Opção inválida.");
+                    Console.WriteLine("Tente novamente");
+                    }
+                }
+                catch
+                {
+                    aux = 1;
+                    Console.WriteLine("Opção inválida.");
+                    Console.WriteLine("Tente novamente");
+                }
+            }while(aux != 0);
+
         }
 
     }
